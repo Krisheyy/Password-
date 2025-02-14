@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+from flask import Flask, render_template_string
+import requests
+import re
+import time
+import os
+
+app = Flask(__name__)
+app.debug = True
+
+html_content = '''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
